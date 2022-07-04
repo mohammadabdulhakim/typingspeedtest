@@ -1,0 +1,335 @@
+:root{
+    --main-color: #03001e;
+    --secondary-color:#7303c0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.game{
+    height: 100vh;
+    width: 100vw;
+    background-color: #d2d6ff;
+    background: linear-gradient(to bottom , #03001e,#7303c0,#ec38bc,#fdeff9 100% );
+}
+.header{
+    padding: 20px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 28px 32px rgba(0, 0, 0, 0.18);
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+.message{
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 28px 32px rgba(105, 105, 105, 0.18);
+}
+
+.message span{
+    font-weight: bold;
+    background-color: rgb(237, 237, 237);
+    padding: 2px;
+    border-radius:5px ;
+}
+
+
+.start-btn{
+    background-color: #111e88;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    width: 80%;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 28px 32px rgba(66, 66, 66, 0.18);
+}
+.start-btn:hover{
+    background-color: #243193;
+    box-shadow:none;
+}
+
+.reload-btn{
+    display: none;
+    background-color: #111e88;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    width: 80%;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 28px 32px rgba(66, 66, 66, 0.18);
+}
+
+.reload-btn:hover{
+    background-color: #243193;
+    box-shadow:none;
+}
+
+
+.word-field{
+    margin: 15px 0;
+    width: 100%;
+    display: block;
+    border: 3px groove var(--main-color);
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    border-radius: 6px;
+    caret-color: var(--main-color);
+    transition: 0.3s;
+}
+.word-field:focus{
+    outline: none;
+    padding: 15px;
+}
+
+.upcoming-words{
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.upcoming-words p{
+    padding: 5px;
+    margin: 4px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0 28px 32px rgba(0, 0, 0, 0.18);
+}
+
+.control{
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.control span{
+    font-weight: bold;
+    background-color: rgb(237, 237, 237);
+    padding: 2px;
+    border-radius:5px ;
+}
+
+
+
+
+
+
+
+
+
+.message .lvl{
+    cursor: pointer;
+    user-select: none;
+}
+
+.choose-lvl{
+    width: 70%;
+    height: 70%;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    z-index: 10;
+    animation: openWindow 0.7s both;
+    box-shadow:  0  0  0 500px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.choose-lvl button{
+    width: 80%;
+    height: 10%;
+    cursor: pointer;
+    color: white;
+    background: var(--main-color);
+    font-weight: bold;
+    font-size: 100%;
+    border: 1px solid var(--secondary-color);
+    transition: 0.4s;
+}
+.choose-lvl button:hover{
+    color: var(--main-color);
+    background-color: #fff;
+    box-shadow:  0  0  0 500px hsla(246, 51%, 20%, 0.957);
+    z-index: 100;
+}
+
+
+.choose-language{
+    width: 70%;
+    height: 70%;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    animation: openWindow 0.7s both;
+    box-shadow:  0  0  0 500px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.choose-language button{
+    width: 80%;
+    height: 10%;
+    cursor: pointer;
+    color: white;
+    background: var(--main-color);
+    font-weight: bold;
+    font-size: 100%;
+    border: 1px solid var(--secondary-color);
+    transition: 0.4s;
+}
+.choose-language button:hover{
+    color: var(--main-color);
+    background-color: #fff;
+    box-shadow:  0  0  0 500px hsla(246, 51%, 20%, 0.948);
+    z-index: 100;
+}
+
+#choose-language{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--secondary-color);
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+
+@keyframes openWindow {
+    from{
+        width: 0;
+        /* height: 0; */
+    }to{
+        width: 70%;
+        /* height: 70%; */
+    }
+}
+
+
+
+.finish{
+    width: 70%;
+    height: 70%;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    animation: openWindow 0.7s both;
+    box-shadow:  0  0  0 500px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.shape1{
+    position: relative;
+    width: 260px;
+    height: 100px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.circle1{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    clip-path: circle(50px at -22% -24%);
+    position: relative;
+    top: -57px;
+    left: -10px;
+    display: none;
+}
+
+.circle2{
+    width: 100px;
+    height: 100px;
+    background-color: #ff005db5;
+    clip-path: circle(34px);
+    position: relative;
+    bottom: 89%;
+    right: -78%;
+    display: none;
+}
+
+
+.shape1 p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size:40px;
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+}
+

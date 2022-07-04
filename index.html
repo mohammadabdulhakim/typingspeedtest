@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="choose-lvl">
+        <button id="Easy" onclick="changeGameMood(this.id)">Easy</button>
+        <button id="Normal" onclick="changeGameMood(this.id)">Normal</button>
+        <button id="Hard" onclick="changeGameMood(this.id)">Hard</button>
+    </div>
+    <button id="choose-language">Ar</button>
+    <div class="choose-language">
+        <button id="Ar" onclick="changeLanMood(this.id)">Arabic</button>
+        <button id="En" onclick="changeLanMood(this.id)">English</button>
+    </div>
+    <div class="game">
+        <div class="header"><h2 class="title">Quick Typing</h2></div>
+        <div class="container">
+            <div class="message">
+                You are Typing on 
+                <span class="lvl"></span> mood. you have <span class="seconds"></span> Seconds to type each word
+            </div>
+            <div class="shape1">
+                <p class="random-word">Hello</p>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+            <input type="text" class="word-field" id="word-field">
+            <button class="start-btn">Start Typing</button>
+            <button class="reload-btn">Reload Typing</button>
+            <div class="upcoming-words">
+                Words you will write , will show here
+            </div>
+            <div class="control">
+                <div class="time">Time left : <span class="time-left">0</span> Seconds</div>
+                <div class="score">Your score : <span class="player-score">0</span> From <span class="total-score">50</span></div>
+            </div>
+            <div class="finish">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
